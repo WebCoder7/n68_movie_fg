@@ -1,0 +1,30 @@
+.sms-page {
+    max-width: 380px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    font-size: 32px;
+  }
+  
+  .description {
+    max-width: 330px;
+    width: 100%;
+    text-align: center;
+    color: #777777;
+  }
+  
+  .highlight {
+    color: #C61F1F;
+  }
+  
+  .resend-code {
+    text-align: center;
+    color: #777777;
+  }
+  

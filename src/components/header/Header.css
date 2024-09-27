@@ -1,0 +1,42 @@
+.header-container {
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    align-items: center;
+  }
+
+  
+  
+  .header-buttons {
+    display: flex;
+    gap: 25px;
+  }
+  
+
+  
+  .header-actions {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .lang-select {
+    padding: 15px;
+    background-color: rgba(29, 29, 29, 0.5);
+    border-radius: 12px;
+    outline: none;
+  }
+  
+  .login-button {
+    background-color: #C61F1F;
+    padding-left: 67px;
+    padding-right: 67px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 12px;
+    color: white;
+    border: none;
+  }
+  
