@@ -62,6 +62,7 @@ function Footer() {
           <p className="footer-text">Спорт</p>
         </div>
       </div>
+      
       <div className="footer-column">
         <div className="contact-info">
           <h5>Связаться с нами</h5>
@@ -75,5 +76,7 @@ function Footer() {
     </div>
   );
 }
+
+
 
 export default Footer;

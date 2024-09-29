@@ -7,10 +7,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 import './Auth.css';
 
-
 function LoginPage() {
   const [telNumber, setTelNumber] = useState("");
-  const inputRef = useMask({ mask: "__  ___ __ __", replacement: { _: /\d/ } });
   const navigate = useNavigate();
   const Token = localStorage.getItem("Token");
 
@@ -23,29 +21,22 @@ function LoginPage() {
 
     if (telNumber.length >= 13) {
       const beginNum = telNumber.split(" ")[0];
-      if (
-        beginNum === "99" ||
-        beginNum === "97" ||
-        beginNum === "95" ||
-        beginNum === "90" ||
-        beginNum === "88" ||
-        beginNum === "33"
-      ) {
+      if (["99", "97", "95", "90", "88", "33"].includes(beginNum)) {
         navigate("/login/sms");
         localStorage.setItem("telNumber", telNumber);
         localStorage.setItem("Token", telNumber);
       } else {
-        toast.error("Notogri raqm");
+        toast.error("Notog'ri raqam kiritildi");
       }
     } else {
-      toast.error("Raqon notogri yozildi");
+      toast.error("Raqam to'liq kiritilmadi");
     }
   };
 
   return (
     <MainLayout>
       <div className="login-page">
-        <Link to={"/"}>
+        <Link to="/">
           <button className="back-button">{" < "}</button>
         </Link>
         <div className="flex justify-center">
@@ -63,7 +54,7 @@ function LoginPage() {
                 <h5>+998</h5>
                 <input
                   value={telNumber}
-                  ref={inputRef}
+                  {...useMask({ mask: "__  ___ __ __", replacement: { _: /\d/ } })}
                   className="input-field"
                   type="text"
                   id="input"
