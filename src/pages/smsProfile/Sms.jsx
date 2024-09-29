@@ -1,10 +1,10 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router";
+import axios from "axios";
 import MainLayout from "../../layouts/Main_layout";
 import OtpInput from "react-otp-input";
 
 import './SmsProfile.css';
-
 
 function SmsPage() {
   const [smsValue, setSmsValue] = useState("");
@@ -13,35 +13,29 @@ function SmsPage() {
   const number = localStorage.getItem("telNumber");
   const navigate = useNavigate();
 
-  
-  const handleLogin = () => {
-    fetch("https://api.escuelajs.co/api/v1/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post("https://api.escuelajs.co/api/v1/auth/login", {
         email: "john@mail.com",
         password: "changeme",
-      }),
-    })
-
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Network response was not ok " + res.statusText);
-        }
-        return res.json();
-      })
-      .then((json) => {
-        localStorage.setItem("Token", json.access_token);
-        navigate('/');
+      }, {
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
+
+      const { access_token } = response.data;
+      localStorage.setItem("Token", access_token);
+      navigate('/');
+    } catch (error) {
+      console.error("There was an error with the login request:", error);
+      alert("Ошибка при попытке входа.");
+    }
   };
 
   return Token ? (
     <MainLayout>
       <div className="sms-page">
-
         <h1 className="header">Введите СМС-код</h1>
         <p className="description">
           Введите СМС-код, который мы отправили на номер{" "}
@@ -75,21 +69,11 @@ function SmsPage() {
         <p className="resend-code">
           Отправить код еще раз – <span className="highlight">0:52</span>
         </p>
-
       </div>
-
     </MainLayout>
-
   ) : (
     navigate("/")
   );
-
 }
-
-
-
-
-
-
 
 export default SmsPage;

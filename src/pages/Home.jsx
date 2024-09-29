@@ -1,4 +1,5 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import MainLayout from "../layouts/Main_layout";
 import Slider from "../components/slider/Slider";
 import Render from "../components/card/Card";
@@ -7,11 +8,16 @@ function Home() {
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((data) => {
-        setMovie(data);
-      });
+    const fetchMovies = async () => {
+      try {
+        const response = await axios.get("https://fakestoreapi.com/products");
+        setMovie(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchMovies();
   }, []);
 
   return (
