@@ -1,0 +1,18 @@
+.title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+  
+  .details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .details-row {
+    display: flex;
+    justify-content: space-between;
+    color: #a1a1a1;
+    font-size: 16px;
+  }
+  

@@ -1,0 +1,52 @@
+.ticket-container {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+  }
+  
+  .ticket-header {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    background-color: #111111;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+  .zal-number {
+    color: #444444;
+    font-size: 14px;
+  }
+  
+  .ticket-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .ticket-time {
+    font-size: 16px;
+  }
+  
+  .vip-info {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .vip-label {
+    font-size: 16px;
+  }
+  
+  .ticket-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background-color: #2d2d2d;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  
+  .appearance,
+  .price {
+    font-size: 14px;
+  }
+      

@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import panda from "../../assets/panda.png";
+import king_kong from "../../assets/king-kong.png";
+import cinema_market from "../../assets/cinema-market.png";
 import { useState } from "react";
 import "./Slider.css"; 
 
@@ -8,7 +10,7 @@ function Slider() {
   const [swiperInstance, setSwiperInstance] = useState(null);
 
   return (
-    <div  >
+    <div>
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
@@ -20,33 +22,31 @@ function Slider() {
           <img src={panda} alt="Panda" />
         </SwiperSlide>
         <SwiperSlide>
-          <img className="panda2" src={panda} alt="King Kong" />
+          <img src={king_kong} alt="King Kong" />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="custom-slide-image"
-            src={panda}
+            className="slide-image"
+            src={cinema_market}
             alt="Cinema Market"
           />
         </SwiperSlide>
       </Swiper>
 
-      <div className="slider-controls">
+      <div className="controls">
         <button
-          className="control-button"
+          className="control-btn"
           onClick={() => swiperInstance?.slidePrev()}
         >
-          {"<"}
+          {" < "}
         </button>
-
 
         <button
-          className="control-button"
+          className="control-btn"
           onClick={() => swiperInstance?.slideNext()}
         >
-          {">"}
+          {" > "}
         </button>
-
       </div>
     </div>
   );

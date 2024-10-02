@@ -1,0 +1,71 @@
+.loader-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top-color: green;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .movie-image-section {
+    position: relative;
+    margin-bottom: 12px;
+  }
+  
+  .movie-image {
+    max-width: 1360px;
+    width: 100%;
+    max-height: 640px;
+    object-cover: cover;
+  }
+  
+  .image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 28px;
+    background-color: black;
+    opacity: 0.5;
+  }
+  
+  .movie-title {
+    position: absolute;
+    bottom: 20px;
+    left: 40%;
+    font-size: 32px;
+    font-weight: medium;
+    color: white;
+  }
+  
+  .tab-buttons-container {
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .tab-button {
+    padding: 16px;
+    width: 188px;
+    border-radius: 12px;
+    background-color: #111111;
+  }
+  
+  .tab-button.active-tab {
+    background-color: #1D1D1D;
+    color: #C61F1F;
+  }
+  

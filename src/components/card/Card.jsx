@@ -1,33 +1,14 @@
+import { useNavigate  } from "react-router";
+import "./Card.css"; 
 
-import './Card.css';
-
-
-function Card({ data = [] }) {
+function Render({ data = [] }) {
+  const navigate = useNavigate();
   return (
-    <div className="card-container">
-      <h3 className="card-title">На неделе</h3>
-
-
-      <div className="card-grid">
-        {data.map((movie, i) => (
-          <div key={i} className="card-item ">
-            <div className="card-image-container">
-              <img className="card-image" src={movie.image} alt={movie.title} />
-            </div>
-            <h4 className="card-movie-title">
-              {movie.title}
-
-            </h4>
-
-            <p className="card-genre">
-            </p>
-          </div>
-
-        ))}
-      </div>
-
+    <div className="container">
+      
+      
     </div>
   );
 }
 
-export default Card;
+export default Render;

@@ -1,30 +1,26 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import MainLayout from "../layouts/Main_layout";
+import MainLayout from "../layouts/Main_layout/index";
 import Slider from "../components/slider/Slider";
 import Render from "../components/card/Card";
+import useFetchData from "../hook/Fetch";
 
 function Home() {
-  const [movie, setMovie] = useState([]);
+  const { data: movieData, isLoading, error } = useFetchData("/movies");
+  
 
-  useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const response = await axios.get("https://fakestoreapi.com/products");
-        setMovie(response.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+  if (isLoading)
+    return (
+      <div className="spinner-container">
+        <div className="spinner"></div>
+      </div>
+    );
 
-    fetchMovies();
-  }, []);
+  if (error) return <div>Error loading movies...</div>;
 
   return (
-    <div className="max-w-[1360px] w-full mx-auto">
+    <div className="main-container">
       <MainLayout>
         <Slider />
-        <Render data={movie} />
+        <Render data={movieData} />
       </MainLayout>
     </div>
   );

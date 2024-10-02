@@ -6,77 +6,77 @@ import rek from "../../assets/reklama.svg";
 import faq from "../../assets/FAQ.svg";
 import contact from "../../assets/contact.svg";
 import insta from "../../assets/instagram.svg";
-
-import './Footer.css';
-
+import "./Footer.css"; 
 
 function Footer() {
   return (
     <div className="footer-container">
-      <div className="footer-section">
-        <img width="55px" src={logo} alt="Logo" />
-        <div className="footer-links">
-          <a href="">
+      <div className="footer-logo-section">
+        <img width="55px" src={logo} alt="Footer Logo" />
+        <div className="app-links">
+          <a href="#">
             <img src={play_market} alt="Google Play" />
           </a>
-          <a href="">
+          <a href="#">
             <img src={app_store} alt="App Store" />
           </a>
         </div>
       </div>
-      <div className="footer-column">
+
+      <div className="footer-section">
         <h5>О нас</h5>
         <div className="footer-item">
-          <img src={list} alt="List" />
-          <p className="footer-text">Публичная оферта</p>
+          <img src={list} alt="Public Offer" />
+          <p className="text-light">Публичная оферта</p>
         </div>
         <div className="footer-item">
-          <img src={rek} alt="Advertisement" />
-          <p className="footer-text highlighted">Реклама</p>
+          <img src={rek} alt="Reklama" />
+          <p className="text-highlight">Реклама</p>
         </div>
         <div className="footer-item">
           <img src={faq} alt="FAQ" />
-          <p className="footer-text">F.A.Q</p>
+          <p className="text-light">F.A.Q</p>
         </div>
         <div className="footer-item">
-          <img src={contact} alt="Contact" />
-          <p className="footer-text">Контакты</p>
+          <img src={contact} alt="Contacts" />
+          <p className="text-light">Контакты</p>
         </div>
       </div>
-      <div className="footer-column">
+
+      <div className="footer-section">
         <h5>Категории</h5>
         <div className="footer-item">
-          <img src={list} alt="List" />
-          <p className="footer-text">Кино</p>
+          <img src={list} alt="Cinema" />
+          <p className="text-light">Кино</p>
         </div>
         <div className="footer-item">
-          <img src={rek} alt="Theater" />
-          <p className="footer-text">Театр</p>
+          <img src={rek} alt="Theatre" />
+          <p className="text-light">Театр</p>
         </div>
         <div className="footer-item">
           <img src={faq} alt="Concerts" />
-          <p className="footer-text">Концерты</p>
+          <p className="text-light">Концерты</p>
         </div>
         <div className="footer-item">
-          <img src={contact} alt="Sport" />
-          <p className="footer-text">Спорт</p>
+          <img src={contact} alt="Sports" />
+          <p className="text-light">Спорт</p>
         </div>
       </div>
-      
-      <div className="footer-column">
-        <div className="contact-info">
+
+      <div className="footer-section">
+        <div className="footer-contact">
           <h5>Связаться с нами</h5>
           <h5 className="contact-number">+998 (95) 897-33-38</h5>
         </div>
-        <div className="social-media">
+        <div className="footer-social">
           <h5>Социальные сети</h5>
-          <img width={"24px"} src={insta} className="social-icon" alt="Instagram" />
+          <div className="social-icons">
+            <img width="24px" src={insta} alt="Instagram" />
+          </div>
         </div>
       </div>
     </div>
   );
 }
-
-
 
 export default Footer;
