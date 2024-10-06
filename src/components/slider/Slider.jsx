@@ -1,8 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import panda from "../../assets/panda.png";
-import king_kong from "../../assets/king-kong.png";
-import cinema_market from "../../assets/cinema-market.png";
 import { useState } from "react";
 import "./Slider.css"; 
 
@@ -22,12 +20,12 @@ function Slider() {
           <img src={panda} alt="Panda" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={king_kong} alt="King Kong" />
+          <img src={panda} alt="King Kong" />
         </SwiperSlide>
         <SwiperSlide>
           <img
             className="slide-image"
-            src={cinema_market}
+            src={panda}
             alt="Cinema Market"
           />
         </SwiperSlide>

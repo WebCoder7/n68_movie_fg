@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import MainLayout from "../../layouts/Main_layout/index";
-import Bileti from "../../components/bilet/Bileti";
+import Bileti from "../../components/bileti/Bileti";
 import About_film from "../../components/film/About_film";
 import useFetchData from "../../hook/Fetch";
 import "./Detail.css"; 

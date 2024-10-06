@@ -3,16 +3,19 @@
   padding-right: 90px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 1rem;
   align-items: center;
 }
 
-.navigation {
+.nav-buttons {
   display: flex;
-  gap: 20px;
 }
 
-.header-controls {
+.nav-buttons button {
+  margin-right: 1rem;
+}
+
+.profile-actions {
   display: flex;
   gap: 20px;
 }
@@ -25,9 +28,10 @@
 }
 
 .login-button {
-  background-color: #C61F1F;
+  background-color: #c61f1f;
   padding: 18px 67px;
   border-radius: 12px;
   color: white;
-  font-weight: bold;
+  cursor: pointer;
+  border: none;
 }

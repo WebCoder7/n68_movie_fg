@@ -1,4 +1,4 @@
-import "./Bilet_card.css"; 
+import './Bilet_card.css'; 
 
 function Bilet_card({ date = "Чт", number = "28" }) {
   return (

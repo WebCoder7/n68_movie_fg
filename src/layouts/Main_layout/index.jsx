@@ -1,6 +1,3 @@
-
-
-
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import { useLocation } from "react-router";
@@ -16,6 +13,8 @@ const MainLayout = (prop) => {
       {location.pathname === "/login/sms" ? (
         <div className="text-center">Нажимая на кнопку Регистрация</div>
       ) : location.pathname === "/profile" ? (
+        ""
+      ) : location.pathname === "/search" ? (
         ""
       ) : (
         <Footer />

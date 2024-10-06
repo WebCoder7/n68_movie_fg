@@ -1,0 +1,42 @@
+.bileti-container {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.months-container {
+  display: flex;
+  gap: 11px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.month-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.month-title {
+  margin-bottom: 3px;
+}
+
+.bilets-wrapper {
+  display: flex;
+  gap: 2px;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.tickets-wrapper {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.divider {
+  border: 1px solid #2d2d2d;
+  margin-bottom: 12px;
+}

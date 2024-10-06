@@ -1,62 +1,41 @@
-.container {
-  margin-left: 90px;
+.render-container {
+  margin-left: 140px;
   margin-right: 90px;
 }
 
-.heading {
+.render-title {
   font-size: 20px;
   margin-bottom: 20px;
 }
 
-.movies-container {
+.movie-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
 }
 
 .movie-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  transition: all 0.2s ease-in-out;
+  gap: 20px;
   cursor: pointer;
+  background-color: #1D1D1D;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.movie-card:hover {
-  background-color: #1f2937; /* Equivalent to hover:bg-gray-950 */
-}
+
 
 .movie-image {
   width: 280px;
   height: 400px;
-  background-color: #1d1d1d;
-  border-radius: 12px;
-  overflow: hidden;
 }
 
-.image {
+.movie-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.movie-title {
-  font-weight: 500;
-  width: 188px;
-  font-size: 24px;
-  transition: all 0.2s ease-in-out;
-}
 
-.movie-description {
-  color: #4d4d4d;
-  font-size: 14px;
-  transition: all 0.2s ease-in-out;
-}
-
-.group:hover .movie-title {
-  font-weight: 800; /* Equivalent to font-extrabold */
-}
-
-.group:hover .movie-description {
-  color: white;
-}

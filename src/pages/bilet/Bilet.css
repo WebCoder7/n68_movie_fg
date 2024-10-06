@@ -1,0 +1,26 @@
+.bileti-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 48px; 
+}
+
+.bilet-tabs {
+  display: flex;
+  margin-bottom: 56px; 
+}
+
+.bilet-tab {
+  width: 188px;
+  border-radius: 12px;
+  padding: 16px 0;
+  background-color: #111111;
+  color: #ffffff; 
+  cursor: pointer; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.bilet-tab.active {
+  background-color: #1D1D1D; 
+  color: #C61F1F; 
+}
